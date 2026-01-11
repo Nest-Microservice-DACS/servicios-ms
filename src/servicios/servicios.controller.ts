@@ -3,6 +3,8 @@ import { MessagePattern, Payload } from '@nestjs/microservices';
 import { CreateServicioDto } from './dto/create-servicio.dto';
 import { UpdateServicioDto } from './dto/update-servicio.dto';
 import { ServiciosService } from './servicios.service';
+import { PaginationDto } from 'src/common/dtos/pagination.dto';
+
 
 @Controller()
 export class ServiciosController {
@@ -14,8 +16,8 @@ export class ServiciosController {
   }
 
   @MessagePattern({cmd: 'get_servicios'})
-  findAll() {
-    return this.serviciosService.findAll();
+  findAll(@Payload() paginationDto: PaginationDto) {
+    return this.serviciosService.findAll(paginationDto);
   }
 
   @MessagePattern({cmd: 'get_servicio_by_id'})
