@@ -2,7 +2,7 @@ import { Controller } from '@nestjs/common';
 import { MessagePattern, Payload } from '@nestjs/microservices';
 import { CreateServiceDto } from './dto/create-service.dto';
 import { UpdateServiceDto } from './dto/update-service.dto';
-import { ServiceService } from './service.service';
+import { ServiceService } from './servicios.service';
 import { PaginationDto } from 'src/common/dtos/pagination.dto';
 
 
