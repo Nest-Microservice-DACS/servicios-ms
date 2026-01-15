@@ -76,7 +76,7 @@ src/
 npm run start:dev
 ```
 
-### Docker (Keycloak)
+### Docker
 1. Tener Docker instalado.
 2. Navegar a la raiz y ejecutar:
    ```bash
